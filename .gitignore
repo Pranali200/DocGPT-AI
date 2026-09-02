@@ -1,0 +1,68 @@
+# =========================
+# Uploaded documents
+# =========================
+backend/uploads/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# =========================
+# Java / Spring Boot
+# =========================
+
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+
+# =========================
+# Node / React
+# =========================
+
+node_modules/
+dist/
+.vite/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# Secrets
+# =========================
+
+application-local.properties
+application.properties

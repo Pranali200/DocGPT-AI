@@ -1,0 +1,1274 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-page {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 75% 55%,
+            rgba(88, 28, 135, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 25% 80%,
+            rgba(236, 72, 153, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            110deg,
+            #16002f 0%,
+            #10001f 45%,
+            #090d32 100%
+        );
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.home-navbar {
+
+    height: 74px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 32px;
+
+    background: rgba(255, 255, 255, 0.22);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(14px);
+
+    position: relative;
+    z-index: 20;
+}
+
+
+/* Logo */
+
+.brand {
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    letter-spacing: -0.8px;
+}
+
+.brand span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #ec4899
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* Navigation */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: 55px;
+}
+
+.nav-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-links a:hover {
+
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* Authentication */
+
+.nav-auth {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.signin-link {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: opacity 0.2s;
+}
+
+.signin-link:hover {
+    opacity: 0.75;
+}
+
+.signup-button {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.35);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.signup-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(124, 58, 237, 0.5);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height:
+        calc(100vh - 74px);
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        70px 70px 90px;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    width: 58%;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* Badge */
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        8px 16px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(168, 85, 247, 0.45);
+
+    background:
+        rgba(126, 34, 206, 0.12);
+
+    color:
+        #c084fc;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 34px;
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(168, 85, 247, 0.05);
+}
+
+.hero-badge span {
+
+    color: #fbbf24;
+
+    font-size: 16px;
+}
+
+
+/* Heading */
+
+.hero h1 {
+
+    font-size:
+        clamp(48px, 5.2vw, 76px);
+
+    line-height: 1.08;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.gradient-text {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ec70c2,
+            #d946ef,
+            #c084fc
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* Description */
+
+.hero-description {
+
+    max-width: 680px;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.primary-button,
+.secondary-button {
+
+    min-width: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.primary-button {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b2cff,
+            #5b38ef
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(124, 58, 237, 0.38);
+}
+
+.primary-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(124, 58, 237, 0.55);
+}
+
+.primary-button span {
+
+    font-size: 21px;
+
+    transition:
+        transform 0.2s;
+}
+
+.primary-button:hover span {
+    transform: translateX(5px);
+}
+
+
+.secondary-button {
+
+    color: #111827;
+
+    background: white;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+.secondary-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   ROBOT AREA
+===================================================== */
+
+.hero-visual {
+
+    width: 42%;
+
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Purple glow behind robot */
+
+.robot-glow {
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.35),
+            rgba(124, 58, 237, 0.08) 45%,
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    animation:
+        glowPulse 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   ROBOT
+===================================================== */
+
+.robot-container {
+
+    width: 250px;
+
+    height: 330px;
+
+    position: relative;
+
+    z-index: 3;
+
+    animation:
+        robotFloat 4s ease-in-out infinite;
+}
+
+
+/* Antenna */
+
+.robot-antenna {
+
+    position: absolute;
+
+    top: -45px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+.antenna-line {
+
+    width: 5px;
+
+    height: 45px;
+
+    margin: 0 auto;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #a855f7,
+            #7c3aed
+        );
+
+    border-radius: 5px;
+}
+
+.antenna-dot {
+
+    position: absolute;
+
+    top: -11px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #d8b4fe,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(168, 85, 247, 0.8);
+
+    animation:
+        antennaPulse 2s ease-in-out infinite;
+}
+
+
+/* Head */
+
+.robot-head {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 35px;
+
+    width: 180px;
+
+    height: 135px;
+
+    border-radius:
+        48px 48px 35px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7545e8,
+            #5b2bd8
+        );
+
+    box-shadow:
+        inset 10px 10px 25px
+        rgba(255,255,255,0.08),
+
+        0 25px 50px
+        rgba(76, 29, 149, 0.4);
+}
+
+
+/* Eyes */
+
+.robot-eye {
+
+    position: absolute;
+
+    top: 42px;
+
+    width: 31px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 15px
+        rgba(255,255,255,0.5);
+
+    animation:
+        eyeBlink 5s infinite;
+}
+
+.robot-eye:first-child {
+    left: 35px;
+}
+
+.robot-eye:nth-child(2) {
+    right: 35px;
+}
+
+
+/* Smile */
+
+.robot-smile {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 27px;
+
+    width: 58px;
+    height: 25px;
+
+    transform:
+        translateX(-50%);
+
+    border-bottom:
+        4px solid #c4b5fd;
+
+    border-radius:
+        0 0 50px 50px;
+}
+
+
+/* Body */
+
+.robot-body {
+
+    position: absolute;
+
+    top: 118px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 155px;
+
+    height: 160px;
+
+    border-radius:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6d35df,
+            #5124c6
+        );
+
+    box-shadow:
+        inset 10px 10px 25px
+        rgba(255,255,255,0.06),
+
+        0 25px 45px
+        rgba(59, 7, 100, 0.4);
+}
+
+
+/* Screen */
+
+.robot-screen {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 18px;
+
+    width: 119px;
+
+    height: 80px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(167, 139, 250, 0.25);
+
+    padding: 20px 16px;
+}
+
+.screen-line {
+
+    height: 8px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(196, 181, 253, 0.7);
+}
+
+.line-one {
+    width: 80px;
+}
+
+.line-two {
+    width: 58px;
+}
+
+.line-three {
+    width: 72px;
+}
+
+
+/* =====================================================
+   ROBOT ARMS
+===================================================== */
+
+.robot-arm {
+
+    position: absolute;
+
+    top: 145px;
+
+    width: 62px;
+
+    height: 28px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6331dc,
+            #7545e8
+        );
+}
+
+.robot-arm-left {
+    left: -20px;
+
+    transform:
+        rotate(0deg);
+}
+
+.robot-arm-right {
+    right: -20px;
+
+    transform:
+        rotate(0deg);
+}
+
+
+/* Hands */
+
+.robot-hand {
+
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background:
+        #6531df;
+
+    top: 1px;
+}
+
+.robot-arm-left .robot-hand {
+    left: -12px;
+}
+
+.robot-arm-right .robot-hand {
+    right: -12px;
+}
+
+
+/* =====================================================
+   ROBOT LEGS
+===================================================== */
+
+.robot-leg {
+
+    position: absolute;
+
+    top: 265px;
+
+    width: 38px;
+
+    height: 65px;
+
+    border-radius:
+        0 0 18px 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6331dc,
+            #5124c6
+        );
+}
+
+.robot-leg-left {
+    left: 72px;
+}
+
+.robot-leg-right {
+    right: 72px;
+}
+
+
+/* =====================================================
+   FLOATING PARTICLES
+===================================================== */
+
+.particle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    animation:
+        particleFloat 4s ease-in-out infinite;
+}
+
+.particle-one {
+
+    width: 12px;
+    height: 12px;
+
+    top: 25%;
+
+    left: 10%;
+
+    background: #0ea5a8;
+
+    animation-delay: 0.5s;
+}
+
+.particle-two {
+
+    width: 15px;
+    height: 15px;
+
+    top: 32%;
+
+    right: 8%;
+
+    background: #f59e0b;
+
+    animation-delay: 1s;
+}
+
+.particle-three {
+
+    width: 18px;
+    height: 18px;
+
+    bottom: 28%;
+
+    right: 4%;
+
+    background: #3b82f6;
+
+    animation-delay: 1.5s;
+}
+
+.particle-four {
+
+    width: 9px;
+    height: 9px;
+
+    bottom: 35%;
+
+    left: 6%;
+
+    background: #ec4899;
+
+    animation-delay: 2s;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+
+/* Main robot movement */
+
+@keyframes robotFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            translateY(-12px)
+            rotate(1deg);
+    }
+
+    50% {
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+    }
+
+    75% {
+        transform:
+            translateY(-10px)
+            rotate(-1deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+}
+
+
+/* Glow */
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+
+/* Antenna */
+
+@keyframes antennaPulse {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(1.18);
+    }
+}
+
+
+/* Eyes */
+
+@keyframes eyeBlink {
+
+    0%,
+    45%,
+    50%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    47% {
+        transform: scaleY(0.1);
+    }
+}
+
+
+/* Particles */
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform:
+            translateY(-20px);
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .hero {
+
+        padding:
+            60px 40px 80px;
+    }
+
+    .hero h1 {
+
+        font-size: 54px;
+    }
+
+    .hero-description {
+
+        font-size: 16px;
+    }
+
+    .hero-visual {
+
+        transform:
+            scale(0.85);
+    }
+
+    .nav-links {
+
+        margin-left: 30px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .home-navbar {
+
+        height: 64px;
+
+        padding:
+            0 18px;
+    }
+
+    .brand {
+
+        font-size: 20px;
+    }
+
+    .nav-links {
+
+        display: none;
+    }
+
+    .nav-auth {
+
+        gap: 12px;
+    }
+
+    .signin-link {
+
+        font-size: 13px;
+    }
+
+    .signup-button {
+
+        padding:
+            9px 13px;
+
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        min-height:
+            calc(100vh - 64px);
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        text-align: center;
+
+        padding:
+            55px 20px 70px;
+    }
+
+    .hero-content {
+
+        width: 100%;
+    }
+
+    .hero-badge {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(38px, 10vw, 52px);
+
+        letter-spacing:
+            -1.8px;
+
+        line-height: 1.1;
+
+        margin-bottom: 22px;
+    }
+
+    .hero-description {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+        max-width: 500px;
+
+        margin:
+            0 auto 28px;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .primary-button,
+    .secondary-button {
+
+        min-width: 160px;
+
+        padding:
+            13px 18px;
+    }
+
+
+    /* Robot */
+
+    .hero-visual {
+
+        width: 100%;
+
+        height: 360px;
+
+        margin-top: 15px;
+
+        transform:
+            scale(0.8);
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .hero {
+
+        padding:
+            45px 16px 50px;
+    }
+
+    .hero-badge {
+
+        padding:
+            7px 11px;
+    }
+
+    .hero h1 {
+
+        font-size: 36px;
+    }
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+    .hero-visual {
+
+        height: 330px;
+
+        transform:
+            scale(0.7);
+    }
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .robot-container,
+    .robot-glow,
+    .antenna-dot,
+    .robot-eye,
+    .particle {
+
+        animation: none;
+    }
+}
