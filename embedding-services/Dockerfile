@@ -15,4 +15,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Adjust "app.main:app" if your actual entrypoint differs
-CMD exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
+CMD exec uvicorn app:app --host 0.0.0.0 --port ${PORT}
