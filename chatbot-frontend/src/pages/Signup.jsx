@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signup } from "../services/authService";
 import { useNavigate, Link } from "react-router-dom";
 
-import "./Auth.css";
+import "./auth.css";
 
 
 function Signup() {
