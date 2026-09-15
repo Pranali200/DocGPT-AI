@@ -61,8 +61,12 @@ public class SecurityConfig {
         CorsConfiguration configuration =
                 new CorsConfiguration();
 
+        // TODO: replace with your actual Vercel URL
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
+                List.of(
+                        "http://localhost:5173",
+                        "https://doc-gpt-ai-nu.vercel.app/"
+                )
         );
 
         configuration.setAllowedMethods(
