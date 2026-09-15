@@ -59,10 +59,3 @@ dist/
 .DS_Store
 Thumbs.db
 
-
-# =========================
-# Secrets
-# =========================
-
-application-local.properties
-application.properties
