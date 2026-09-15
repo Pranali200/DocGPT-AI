@@ -44,9 +44,13 @@ public class JwtAuthenticationFilter
         String authHeader =
                 request.getHeader("Authorization");
 
+        // TEMP DEBUG
+        System.out.println("=== JWT DEBUG === Authorization header: " + authHeader);
+
         if (authHeader == null ||
                 !authHeader.startsWith("Bearer ")) {
 
+            System.out.println("=== JWT DEBUG === Header missing or doesn't start with 'Bearer ' — skipping auth");
             filterChain.doFilter(request, response);
             return;
         }
@@ -58,6 +62,8 @@ public class JwtAuthenticationFilter
 
             String email =
                     jwtService.extractEmail(token);
+
+            System.out.println("=== JWT DEBUG === Extracted email: " + email);
 
             if (email != null &&
                     SecurityContextHolder
@@ -88,13 +94,18 @@ public class JwtAuthenticationFilter
                             .setAuthentication(
                                     authentication
                             );
+
+                    System.out.println("=== JWT DEBUG === Authentication set successfully for: " + email);
+                } else {
+                    System.out.println("=== JWT DEBUG === Token failed isTokenValid() check");
                 }
             }
 
         } catch (Exception e) {
 
-            // Invalid token.
-            // Request will continue without authentication.
+            // TEMP DEBUG: print the real reason so we can see it in Render logs
+            System.out.println("=== JWT DEBUG === Exception during token processing: " + e.getClass().getName() + " - " + e.getMessage());
+            e.printStackTrace();
         }
 
         filterChain.doFilter(request, response);
